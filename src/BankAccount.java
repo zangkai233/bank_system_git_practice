@@ -26,8 +26,19 @@ public class BankAccount {
 
     }
 
-    public void transferTo(BankAccount other, double amount) {
+    public String transferTo(BankAccount other, double amount) {
+        if (amount <= 0) {
+            return "Invalid transfer amount";
+        }
+
+        if (amount > balance) {
+            return "Insufficient balance";
+        }
+
         this.balance -= amount;
         other.balance += amount;
+
+        return "Transfer successful";
     }
+
 }
