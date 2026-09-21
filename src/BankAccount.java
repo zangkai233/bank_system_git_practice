@@ -25,4 +25,9 @@ public class BankAccount {
         return owner;
 
     }
+
+    public void transferTo(BankAccount other, double amount) {
+        this.balance -= amount;
+        other.balance += amount;
+    }
 }
