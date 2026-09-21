@@ -10,6 +10,7 @@ public class Main {
 
 
         System.out.println("Current balance: $" + account.getBalance());
+        System.out.println(account.withdraw(100));
         System.out.println("Your name is " + name);
         System.out.println("You can make " + balance * 2 + " in the future");
     }
