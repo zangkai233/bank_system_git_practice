@@ -11,9 +11,18 @@ public class BankAccount {
         return balance;
     }
 
+
     public String withdraw(double amount){
         balance -= amount;
         return "The aoumt has been withdraw with " + amount;
+    }
+  
+    public void deposit(double amount){
+        balance += amount;
+    }
+
+    public String getOwner(){
+        return owner;
 
     }
 }
